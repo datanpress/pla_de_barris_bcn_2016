@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<head>
+	<title>renda</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="../common/style/common_style.css" rel="stylesheet">
+	<style>
+		.container{
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.container_in{
+			padding-bottom: 20px;
+		}
+		.fullbackground{
+			width: 100%;
+			background-color: #f2f2f2;
+		}
+		/*indexs*/
+		.index{
+			width: 100%;
+			text-align: left;
+			margin-bottom: 2px;
+			margin-top: 3px;
+			padding-left: 1em;
+			background-color: #f2f2f2;
+			font-size: 0.8em;
+			border-radius: 0.5em;
+		}
+		.indexNom{
+			border-radius: 0.5em 0 0 0.5em;
+			padding: 0.5em 0 0.5em 0;
+			display: inline-block;
+			height: 100%;
+			width: 84%;
+		}
+		.indexVal{
+			padding: 0.5em 0 0.5em 0;
+			width: 15%;
+			text-align: center;
+			float: right;
+			display: inline-block;
+			height: 100%;
+			border-radius: 0 0.5em 0.5em 0;
+		}
+		/*llegenda*/
+		#llegenda{
+			border-top: 1px black solid;
+			border-bottom: 1px black solid;
+			font-size: 0.6em;
+			padding-left: 1em;
+			width: 100%;
+		}
+		#llegenda ul{
+			margin: 0;
+			padding: 0;
+		}
+		#llegenda ul li{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.tab{
+			padding-left: 3em;
+		}
+		h2{
+			font-weight: normal;
+		}
+		h3{
+			font-weight: normal;
+			width: 100%;
+			text-align: center;
+		}
+		table{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		table .ciutat, table .barri{
+			text-align: center;
+		}
+		.circle{
+			height: 8px;
+			width: 8px;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 3px;
+			margin-bottom: 3px;
+		}
+		.desfavorable{
+			background-color: #ff0000;
+		}
+		.favorable{
+			background-color: #2baf57;
+		}
+		.nivellmig{
+			background-color: #ff9900;
+		}
+
+		@media (max-width: 608px) {
+			.content{
+				width: 96% !important;
+			}
+			.wrap_map{
+				width: 60% !important;
+				text-align:center !important;
+				margin-left: 10% !important;
+			}
+		}
+		</style>
+</head>
+<body id="g6" class="graphtable">
+		<div class="container">
+		<h2>LA TRINITAT NOVA</h2>
+			<div>
+				<div class="content" style="width:55%;display:inline-block;min-width:250px">
+					<div id="llegenda">
+						<span class="legend_info">Significat en base 100 per la ciutat de Barcelona.</span><br/>
+						<ul>
+							<li><span class="circle favorable">&nbsp;</span><span class="legend1">25% amb millor indicador</span></li>
+							<li><span class="circle nivellmig">&nbsp;</span><span class="legend2">50% amb valors intermitjos</span></li>
+							<li><span class="circle desfavorable">&nbsp;</span><span class="legend3">25% amb pitjor indicador</span></li>
+						</ul>
+					</div>
+					<div id="indexs">
+						<div class="index">
+							<div class="indexNom sobree">Índex de sobre-envelliment</div>
+							<div class="indexVal desfavorable">64,4</div>
+						</div>
+						<div class="index ">
+							<div class="indexNom soles" title="any 2014">% de persones 75 anys o més que viuen soles</div>
+							<div class="indexVal desfavorable">35,2</div>
+						</div>
+						<div class="index">
+							<div class="indexNom rendFdispo" title="any 2013">Índex Renda Familiar Disponible</div>
+							<div class="indexVal desfavorable">38,5</div>
+						</div>
+						<div class="index">
+							<div class="indexNom ePrimaris" title="any 2014">% persones de 15 anys o més amb estudis primaris o menys</div>
+							<div class="indexVal desfavorable">45,8</div>
+						</div>
+						<div class="index">
+							<div class="indexNom atur" title="any 2014">% atur registrat 16-64 anys</div>
+							<div class="indexVal desfavorable">19,1</div>
+						</div>
+						<div class="index">
+							<div class="indexNom abstencio" title="any 2015">% abstenció muncipals</div>
+							<div class="indexVal desfavorable">55</div>
+						</div>
+						<div class="index">
+							<div class="indexNom eVida" title="període 2009-2013">Esperança de vida al nèixer</div>
+							<div class="indexVal desfavorable">79,8</div>
+						</div>
+						<div class="index">
+							<div class="indexNom mortalitatC" title="període 2009-2013">Raó de mortalitat comparativa</div>
+							<div class="indexVal desfavorable">124,8</div>
+						</div>
+						<div class="index">
+							<div class="indexNom vidaPerduts" title="període 2009-2013">Raó d'Anys Potencials de Vida Perduts</div>
+							<div class="indexVal desfavorable">156,3</div>
+						</div>
+						<div class="index">
+							<div class="indexNom taxTuberco" title="període 2009-2014">Taxa de tuberculosi</div>
+							<div class="indexVal desfavorable">36,7</div>
+						</div>
+						<div class="index">
+							<div class="indexNom fecunditatA" title="període 2009-2014">Taxa de fecunditat adolescent</div>
+							<div class="indexVal desfavorable">36,5</div>
+						</div>
+						<div class="index">
+							<div class="indexNom baixPes" title="període 2010-2014">Prevalència baix pes en nèixer</div>
+							<div class="indexVal nivellmig">6,7</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap_map" style="width:40%;display:inline-block;vertical-align:top;margin-top:10%;min-width:250px;margin-left:20px;">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;width:100%;">&nbsp;</div>
+		<div class="fullbackground">
+			<div class="container">
+				<div class="container_in">
+					<h3>Indicadors socioeconòmics:</h3>
+					<table>
+						<tr><th class="indicadors">Indicadors</th><th class="mitjanaC">Mitjana ciutat</th><th class="Bname">La Trinitat Nova</th></tr>
+						<tr><td class="poblacio">Població. Juny 2014</td><td class="ciutat">1.613.393</td><td class="barri">7.462</td></tr>
+						<tr><td class="superficie">Superfície (km2)</td><td class="ciutat">102,2</td><td class="barri">0,6</td></tr>
+						<tr><td class="densitat">Densitat (hab/km2)</td><td class="ciutat">15.793</td><td class="barri">13.325</td></tr>
+						<tr><td class="poblacioE">Població per edat</td><td class="ciutat"></td><td class="barri"></td></tr>
+						<!--<tr><td class="tab">0-14</td><td class="ciutat">12,5%</td><td class="barri">14,8%</td></tr>
+						<tr><td class="tab">15-24</td><td class="ciutat">8,7%</td><td class="barri">9,8%</td></tr>
+						<tr><td class="tab">26-64</td><td class="ciutat">57,3%</td><td class="barri">55,4%</td></tr>
+						<tr><td class="tab">65 i més</td><td class="ciutat">21,4%</td><td class="barri">20%</td></tr>-->
+						<tr><td class="tab">0-15</td><td class="ciutat">13,3%</td><td class="barri">15,4%</td></tr>
+						<tr><td class="tab">16-64</td><td class="ciutat">65,2%</td><td class="barri">64,5%</td></tr>
+						<tr><td class="tab">65 i més</td><td class="ciutat">21,4%</td><td class="barri">20,0%</td></tr>
+						<tr><td class="poblacioN">Població per lloc de naixament</td><td class="ciutat"></td><td class="barri"></td></tr>
+						<!--<tr><td class="tab">Barcelona</td><td class="ciutat">51,9%</td><td class="barri">51%</td></tr>
+						<tr><td class="tab RestaCat">Resta de Catalunya</td><td class="ciutat">7,5%</td><td class="barri">4,5%</td></tr>
+						<tr><td class="tab RestaEs">Resta de Espanya</td><td class="ciutat">18,4%</td><td class="barri">20,1%</td></tr>
+						<tr><td class="tab Estranger">Estranger</td><td class="ciutat">22,2%</td><td class="barri">24,4%</td></tr>-->
+						<tr><td class="tab RestaCat">Catalunya</td><td class="ciutat">59,3%</td><td class="barri">55,5%</td></tr>
+						<tr><td class="tab RestaEs">Resta de Espanya</td><td class="ciutat">18,4%</td><td class="barri">20,1%</td></tr>
+						<tr><td class="tab Estranger">Estranger</td><td class="ciutat">22,2%</td><td class="barri">24,4%</td></tr>
+						<tr><td class="poblacioNacio">Població per nacionalitat</td><td class="ciutat"></td><td class="barri"></td></tr>
+						<tr><td class="tab Espanyols">Espanyols</td><td class="ciutat">83,4%</td><td class="barri">82,3%</td></tr>
+						<tr><td class="tab Estrangers">Estrangers</td><td class="ciutat">16,6%</td><td class="barri">17,7%</td></tr>
+						<tr><td class="titulatsSup">Titulats superiors i CFGS</td><td class="ciutat">28,4%</td><td class="barri">6,1%</td></tr>
+						<tr><td class="p65sola">Població de més de 65 anys que viu sola</td><td class="ciutat">25,6%</td><td class="barri">31,4%</td></tr>
+						<tr><td class="inSobreE">Índex de sobreenvelliment</td><td class="ciutat">53,5</td><td class="barri">64,4</td></tr>
+						<tr><td class="aturatsR">Nombre d’aturats registrats</td><td class="ciutat">99056</td><td class="barri">861</td></tr>
+						<tr><td class="rendaFH">Renda familiar disponible per habitant</td><td class="ciutat">100</td><td class="barri">38,5</td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+<script src="../common/js/iframeResizer.contentWindow.min.js"></script>
+<script src="../common/js/libs/d3/d3.min.js"></script>
+<script src="../common/js/libs/topojson.v1.min.js"></script>
+<script src="../common/js/libs/ijs/i.min.js"></script>
+<script src="../common/js/utils.js"></script>
+<script src="../common/js/map.js"></script>
+<script type="text/javascript">
+	var myColors = function(value){
+		if (value==0){return '#DDD'}
+		else if (value==1){return '#d24035'}
+	}
+	var map = addMap(d3.select("#map"), 'LTV', myColors, undefined, undefined, undefined, false);
+
+</script>
+</body>
+</html>

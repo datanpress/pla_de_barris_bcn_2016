@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<head>
+	<title>renda</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="../common/style/common_style.css" rel="stylesheet">
+	<style>
+
+		</style>
+</head>
+<body id="g4">
+	<div id="background1">
+		<div id="background2">
+			<div id="container" style="max-width: 700px;display:block;text-align:center;width:100%;margin:0 auto;">
+				<span style="width:55%;display:inline-block;min-width:250px">
+					<div id="map" width="100%" padding-bottom:100%;>
+					</div>
+				</span>
+				<span style="width:44%;display:inline-block;vertical-align:top;text-align:left;min-width:250px;padding-top:30px;margin-bottom:10px;">
+					<span class="info_text expanded">
+						<h4>Renta familiar disponible per càpita 2014</h4>
+						<p>
+							<span class="info">El 2014 és manté el fort contrast entre la zona oest i nord-est i s'accentua la polarització per eixamplar-se la distancia entre el barris amb valors extrems</span>
+							<br/>
+							<br/>
+							<span class="legend"></span>
+						</p>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+<script src="../common/js/iframeResizer.contentWindow.min.js"></script>
+<script src="../common/js/libs/d3/d3.min.js"></script>
+<script src="../common/js/libs/topojson.v1.min.js"></script>
+<script src="../common/js/libs/ijs/i.min.js"></script>
+<script src="../common/js/utils.js"></script>
+<script src="../common/js/map.js"></script>
+<script type="text/javascript">
+	addMap(d3.select("#map"), 'RFD', undefined, undefined, function(map) {
+		map.putLegend(d3.select('.legend'));
+	});
+</script>
+</body>
+</html>

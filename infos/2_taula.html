@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<head>
+	<title>renda</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="../common/style/common_style.css" rel="stylesheet">
+	<style>
+		table{
+			border-bottom: 1px black solid;
+			width: 92%;
+			margin: 0 auto;
+		}
+
+		td.number{
+			border-top: 1px #FFF solid;
+		}
+		td.number.first{
+			border-top: 1px black solid;
+		}
+		tr.districte{
+			border-top: 1px black solid;
+			white-space: nowrap;
+		}
+		table th{
+			vertical-align: bottom;
+			font-size: 0.5em;
+			font-weight: bold;
+			cursor: default;
+		}
+		table td{
+			font-size: 0.6em;
+		}
+		table td.barri{
+			font-size: 0.7em;
+			white-space: nowrap;
+		}
+		.info_text{
+			width: auto;
+		}
+		.info_pdf{
+			display:none;
+		}
+
+		@media (max-width: 874px) {
+			.info_text{
+				margin-left:.5em;
+				margin-right: .5em;
+			}
+		}
+		@media (max-width: 845px) {
+			.info_text{
+				display:none;
+			}
+			.info_pdf{
+				background-color: rgba(255,255,255, 0.8);
+				border: 1px white solid;
+				display: inline-block;
+				padding: 0.3em;
+				margin: 0.2em 1em 0.2em 1em;
+				width: 90%;
+				height:200px;
+				text-align:center;
+			}
+			.info_pdf a{
+				text_decoration:none;
+				color: #D43E33;
+				/*font-weight:bold;*/
+			}
+		}
+		</style>
+</head>
+<body>
+	<div id="background1">
+		<div id="background2">
+			<div id="taula" class="info_text">
+			</div>
+			<div id="taula" class="info_pdf">
+					<a href="../common/data/UrbanHeart.pdf" target="_blank">Descarrega Taula general <strong>Urban Hear</strong> en pdf</a>
+			</div>
+		</div>
+	</div>
+
+<script src="../common/js/iframeResizer.contentWindow.min.js"></script>
+<script src="../common/js/libs/d3/d3.min.js"></script>
+<script src="../common/js/libs/topojson.v1.min.js"></script>
+<script src="../common/js/libs/ijs/i.min.js"></script>
+<script src="../common/js/utils.js"></script>
+<script src="../common/js/map.js"></script>
+<script type="text/javascript">
+
+d3.csv("../common/data/hurban_heart.csv", function(doc) {
+	//console.log(doc);
+	var taula = d3.select("#taula").append("table");
+	var head = taula.append('tr');
+
+	head.append('th').text(''); //Bari
+	head.append('th').text(''); //Districte
+
+
+	var cols = [{'key':'Envell', 'inv':1}, {'key':'Soles', 'inv':1}, {'key':'RFD', 'inv':-1}, {'key':'Nest', 'inv':1}, {'key':'Atur', 'inv':1}, {'key':'Abst', 'inv':1}, {'key':'EV', 'inv':-1}, {'key':'RMC', 'inv':1}, {'key':'Rapvp', 'inv':1}, {'key':'TBC', 'inv':1}, {'key':'Fec Ad', 'inv':1}, {'key':'Baix Pes', 'inv':1}]
+
+	cols.forEach(function(col){
+		head.append('th')
+			.attr('title', texts[col.key]["descripcio"])
+			.text(texts[col.key]["nom_curt"]);
+	})
+	var N = {};
+
+	doc.forEach(function(d){
+		N[d.Districte] = (N[d.Districte] || 0) + 1;
+	});
+	cols.forEach(function(col){
+		var values = [];
+		doc.forEach(function(row){
+			values.push(parse(row[col.key]));
+		});
+		if(col.inv==1){
+			col['color'] = d3.scaleQuantile().domain(values).range(['#79ce66', '#fff391','#fff391', '#ff5e33']);
+		}else{
+			col['color'] = d3.scaleQuantile().domain(values).range(['#ff5e33', '#fff391','#fff391', '#79ce66']);
+		}
+	})
+
+	var prev_districte = ''
+
+	for(i = 0; i < doc.length; i++)
+	{
+		var row_data = doc[i];
+		var row = taula.append('tr');
+		var first = false;
+
+		if(row_data.Districte!==prev_districte){
+			var nd = N[row_data.Districte];
+			row.append('td').attr("rowspan", nd).text(row_data.Districte);
+			row.classed('districte', true);
+			first = true;
+		}
+		row.append('td').classed('barri', true).text(row_data.Barri);
+
+		cols.forEach(function(col){
+			var value = row_data[col.key]
+			row.append('td')
+				.style('text-align', 'center')
+				.style('width', '5%')
+				.classed('number', true)
+				.classed('first', first)
+				.style('background-color', col['color'](parse(value)))
+				.attr('title', texts[col.key]["nom_curt"]+' a '+ row_data.Barri+': favorable')
+				.text(humanize(value));
+		});
+
+		prev_districte = row_data.Districte;
+	};
+
+})
+
+</script>
+</body>
+</html>

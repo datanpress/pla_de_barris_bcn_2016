@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<head>
+	<title>renda</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="../common/style/common_style.css" rel="stylesheet">
+	<style>
+		.description_p{
+			margin: 0px;
+			padding: 0px;
+		}
+		.description{
+			font-size: 0.7em;
+			line-height: 1.2;
+			margin: 0px;
+			padding: 0px;
+			padding-left: 1em;
+			padding-bottom: 0.5em;
+		}
+	</style>
+</head>
+<body>
+	<div id="background1">
+		<div id="background2">
+			<div id="container" style="max-width: 700px;display:block;text-align:center;width:100%;margin:0 auto;">
+				<span style="width:55%;display:inline-block;min-width:250px">
+					<div id="map" width="100%" padding-bottom:100%;>
+					</div>
+				</span>
+				<span style="width:44%;display:inline-block;vertical-align:top;text-align:left;min-width:250px;padding-top:30px;margin-bottom:10px;">
+					<span class="info_text expanded clickable" prop="RFD" inv="0" id="first_info">
+						<h4>Renda familiar disponible</h4>
+						<p class="description_p"></p>
+						<span class="legend"></span>
+					</span>
+					<span class="info_text clickable" prop="Atur" inv="1">
+						<h4>Atur</h4>
+						<p class="description_p"></p>
+						<span class="legend"></span>
+					</span>
+					<span class="info_text clickable" prop="Fec Ad" inv="1">
+						<h4>Fecunditat adolescent</h4>
+						<p class="description_p"></p>
+						<span class="legend"></span>
+					</span>
+					<span class="info_text clickable" prop="EV" inv="0">
+						<h4>Esperança de Vida</h4>
+						<p class="description_p"></p>
+						<span class="legend"></span>
+					</span>
+					<span class="info_text clickable" prop="TBC" inv="1">
+						<h4>Tuberculosis</h4>
+						<p class="description_p"></p>
+						<span class="legend"></span>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+
+<script src="../common/js/iframeResizer.contentWindow.min.js"></script>
+<script src="../common/js/libs/d3/d3.min.js"></script>
+<script src="../common/js/libs/topojson.v1.min.js"></script>
+<script src="../common/js/libs/ijs/i.min.js"></script>
+<script src="../common/js/utils.js"></script>
+<script src="../common/js/map.js"></script>
+<script type="text/javascript">
+
+	var map = addMap(d3.select("#map"), 'RFD', undefined, false, function(map){
+		map.putLegend(d3.select('#first_info').select('.legend'));
+		d3.select('#first_info').select('.description_p').classed('description', true).attr('title', texts['RFD']['descripcio']).html(texts['RFD']['nom_llarg']);
+	});
+
+
+	d3.selectAll('.info_text').on('click', function(){
+		var prop = d3.select(this).attr('prop');
+		var inv = d3.select(this).attr('inv')=="1";
+		map.ChangeProperty(prop, inv);
+		d3.selectAll('.info_text').classed("expanded", false);
+		d3.selectAll('.info_text .legend').html("");
+		d3.selectAll('.info_text .description_p').classed('description', false).html("");
+		d3.select(this).classed("expanded", true);
+		map.putLegend(d3.select(this).select('.legend'));
+		d3.select(this).select('.description_p').classed('description', true).attr('title', texts[prop]['descripcio']).html(texts[prop]['nom_llarg']);
+	})
+
+</script>
+</body>
+</html>

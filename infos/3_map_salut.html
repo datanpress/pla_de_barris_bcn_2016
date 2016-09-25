@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<head>
+	<title>renda</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="../common/style/common_style.css" rel="stylesheet">
+	<style>
+		.info_text{
+			width: 100%;
+		}
+		@media (max-width: 564px) {
+			.info_text{
+				margin-left:0em;
+				margin-right: 0em;
+			}
+		}
+
+	</style>
+</head>
+<body id="g3">
+	<div id="background1">
+		<div id="background2">
+			<div id="container" style="max-width: 700px;display:block;text-align:center;width:100%;margin:0 auto;">
+				<span style="width:55%;display:inline-block;min-width:250px">
+					<div id="map" width="100%" padding-bottom:100%;>
+					</div>
+					<span class="legend">
+					<!--
+						<div style="display:inline-table;height:22px;width:22px;border:1px gray solid;border-radius:3px">
+							<div style="display:table-row">
+								<div style="background-color:#99d594;display:table-cell"></div>
+							</div>
+						</div>
+						-->
+					</span>
+				</span>
+				<span style="width:44%;display:inline-block;vertical-align:top;text-align:left;min-width:250px;padding-top:30px;margin-bottom:10px;">
+					<span class="info_text expanded">
+						<h4>18 Barris amb indicadors més desfavorables</h4>
+							<table>
+								<tr><th class="districte">Districte</th><th class="barri">Barri</th></tr>
+								<tr><td rowspan="4" class="topborder">Ciutat Vella</td><td class="topborder">la Barceloneta</td></tr>
+								<tr><td>el Gòtic</td></tr>
+								<tr><td>el Raval</td></tr>
+								<tr><td>St Pere, Sta Caterina i la Ribera</td></tr>
+								<tr><td rowspan="1" class="topborder">Sants-Montjuïc</td><td class="topborder">Marina del Prat Vermell</td></tr>
+								<tr><td rowspan="1" class="topborder">Horta-Guinardó</td><td class="topborder">el Carmel</td></tr>
+								<tr><td rowspan="8" class="topborder">Nou Barris</td><td class="topborder">Can Peguera</td></tr>
+								<tr><td>Ciutat Meridiana</td></tr>
+								<tr><td>les Roquetes</td></tr>
+								<tr><td>Torre Barró</td></tr>
+								<tr><td>la Trinitat Nova</td></tr>
+								<tr><td>el Turó de la Peira</td></tr>
+								<tr><td>Vallbona</td></tr>
+								<tr><td>Verdum</td></tr>
+								<tr><td rowspan="3" class="topborder">Sant Andreu</td><td class="topborder">Baró de Viver</td></tr>
+								<tr><td>el Bon Pastor</td></tr>
+								<tr><td>la Trinitat Vella</td></tr>
+								<tr><td rowspan="3" class="topborder">Sant Martí</td><td class="topborder">el Besòs i Maresme</td></tr>
+							</table>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+
+<script src="../common/js/iframeResizer.contentWindow.min.js"></script>
+<script src="../common/js/libs/d3/d3.min.js"></script>
+<script src="../common/js/libs/topojson.v1.min.js"></script>
+<script src="../common/js/libs/ijs/i.min.js"></script>
+<script src="../common/js/utils.js"></script>
+<script src="../common/js/map.js"></script>
+<script type="text/javascript">
+	/*var myColors = function(value){
+		if (value==3){return '#99d594'}
+		else if (value==2){return '#ffffbf'}
+		else if (value==1){return '#fc8d59'}
+	}*/
+
+	var myColors = function(value){
+		if (value==3){return '#79ce66'}
+		else if (value==2){return '#fff391'}
+		else if (value==1){return '#ff5e33'}
+	}
+
+	var tooltip = function(property, barri, hurban_heart){
+		var value= hurban_heart.get(parseInt(barri))[property];
+		if (value==3){return iJS._('més favorable')}
+		else if (value==2){return iJS._('nivell mig')}
+		else if (value==1){return iJS._('menys favorable')}
+	}
+
+	addMap(d3.select("#map"), 'indic', myColors, undefined, function(map) {
+		var row1 = d3.select('.legend').append('div').style('text-align', 'left')
+        var legendT = row1.append('div').style('display', 'inline-table').style('width','15px').style('height','15px').style('vertical-align','middle').style('margin-right', '5px').style('margin-left', '15px');
+        legendT.style('border', '1px gray solid').style('border-radius', '3px')
+        var legend = legendT.append('div').style('display', 'table-row');
+        legend.append('div').style('background-color', '#79ce66').style("width", "10px").style("height", "10px").style('display', 'table-cell');
+        row1.append('span').text(iJS._('més favorables')).style('font-size', '0.9em').style('font-weight', 'bold');
+        //
+        var row2 = d3.select('.legend').append('div').style('text-align', 'left')
+        var legendT = row2.append('div').style('display', 'inline-table').style('width','15px').style('height','15px').style('vertical-align','middle').style('margin-right', '5px').style('margin-left', '15px');
+        legendT.style('border', '1px gray solid').style('border-radius', '3px')
+        var legend = legendT.append('div').style('display', 'table-row');
+        legend.append('div').style('background-color', '#fff391').style("width", "10px").style("height", "10px").style('display', 'table-cell');
+        row2.append('span').text(iJS._('nivell mig')).style('font-size', '0.9em').style('font-weight', 'bold');
+        //
+        var row3 = d3.select('.legend').append('div').style('text-align', 'left')
+        var legendT = row3.append('div').style('display', 'inline-table').style('width','15px').style('height','15px').style('vertical-align','middle').style('margin-right', '5px').style('margin-left', '15px');
+        legendT.style('border', '1px gray solid').style('border-radius', '3px')
+        var legend = legendT.append('div').style('display', 'table-row');
+        legend.append('div').style('background-color', '#ff5e33').style("width", "10px").style("height", "10px").style('display', 'table-cell');
+        row3.append('span').text( iJS._('més desfavorables')).style('font-size', '0.9em').style('font-weight', 'bold');
+	}, undefined, tooltip);
+</script>
+</body>
+</html>
