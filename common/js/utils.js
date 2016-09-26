@@ -29,6 +29,11 @@ d3.select('[prop="Fec Ad"] h4').text(iJS._('Fecunditat adolescent'));
 d3.select('[prop="EV"] h4').text(iJS._('Esperança de vida'));
 d3.select('[prop="TBC"] h4').text(iJS._('Tuberculosi'));
 
+// html2
+d3.select('body#g2 .info_pdf a').html(iJS._('Descarrega Taula general <strong>Urban Hear</strong> en pdf'));
+if(lang=='es'){
+  d3.select('body#g2 .info_pdf a').attr("href","../common/data/UrbanHeart_es.pdf")
+}
 
 //html3
 d3.select('body#g3 h4').text(iJS._('18 Barris amb indicadors més desfavorables'))
