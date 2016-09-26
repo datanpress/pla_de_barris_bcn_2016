@@ -2,24 +2,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pla de barris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-22 19:31+0200\n"
-"PO-Revision-Date: 2016-09-25 15:12+0000\n"
+"POT-Creation-Date: 2016-09-26 08:52+0200\n"
+"PO-Revision-Date: 2016-09-26 08:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Loco-Source-Locale: en_ES\n"
-"X-Generator: Loco - https://localise.biz/\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Loco-Parser: loco_parse_po\n"
 "X-Poedit-SearchPath-0: common/js/map.js\n"
 "X-Poedit-SearchPath-1: infos/1_map_desigualtats.html\n"
 "X-Poedit-SearchPath-2: common/js/utils.js\n"
 "X-Poedit-SearchPath-3: infos/3_map_salut.html\n"
-"X-Loco-Parser: loco_parse_po"
+
+#: common/js/map.js:5
+msgid "Envelliment"
+msgstr "Envejecimiento"
+
+#: common/js/map.js:6
+msgid "Índex sobreenvelliment."
+msgstr "Índice de sobreenvejecimiento"
 
 #: common/js/map.js:9
 msgid ""
@@ -28,6 +36,27 @@ msgid ""
 msgstr ""
 "proporción de personas de 75 años o más sobre el número de personas de 65 "
 "años o menos."
+
+#: common/js/map.js:10
+msgid "Persones grans que viuen soles"
+msgstr "Personas mayores que viven solas"
+
+#: common/js/map.js:11
+msgid "% persones 75 anys o més que viuen soles."
+msgstr "% de personas de 75 años o más que viven solas."
+
+#: common/js/map.js:14
+#, javascript-format
+msgid "% de persones de 75 anys o més que viuen soles. Anys 2014."
+msgstr "% de personas de 75 años o más que viven solas, año 2014."
+
+#: common/js/map.js:15
+msgid "Renda Familiar Disponible"
+msgstr "Renta Familiar Disponible"
+
+#: common/js/map.js:17
+msgid "Índex de Renda Familiar Disponible."
+msgstr "Índice de Renta Familiar Disponible"
 
 #: common/js/map.js:20
 msgid ""
@@ -46,6 +75,28 @@ msgstr ""
 "económica del barrio, y en menor valor de RFD, menor capacidad económica del "
 "barrio. Año 2014."
 
+#: common/js/map.js:21
+msgid "Estudis primaris o menys"
+msgstr "Estudios primarios o menos"
+
+#: common/js/map.js:22
+msgid "% persones de 15 anys o més amb estudis primaris o menys."
+msgstr "% de personas de 15 años o más con estudios primarios o menos."
+
+#: common/js/map.js:25
+msgid "% persones de 15 anys o més amb estudis primaris o menys. Any 2014."
+msgstr ""
+"% de personas de 15 años o más con estudios primarios o menos. Año 2014"
+
+#: common/js/map.js:26 common/js/utils.js:27
+msgid "Atur"
+msgstr "Paro"
+
+#: common/js/map.js:27
+#, javascript-format
+msgid "% d'atur registrat entre 16-64 anys."
+msgstr "% de paro registrado, 16-64 años."
+
 #: common/js/map.js:30
 #, javascript-format
 msgid ""
@@ -57,6 +108,14 @@ msgstr ""
 "la Generalitat sobre el número de personas de 16 a 64 años. Estimación por "
 "barrios a partir de los datos facilitados por códigos postales. Año 2014."
 
+#: common/js/map.js:31
+msgid "Abstenció eleccions"
+msgstr "Abstención elecciones "
+
+#: common/js/map.js:32
+msgid "% abstenció eleccions municipals."
+msgstr "% de abstención en municipales."
+
 #: common/js/map.js:35
 #, javascript-format
 msgid ""
@@ -66,6 +125,18 @@ msgstr ""
 "% de personas que no han participado en la convocatoria electoral en las "
 "últimas elecciones municipales."
 
+#: common/js/map.js:36 common/js/utils.js:29
+msgid "Esperança de vida"
+msgstr "Esperanza de vida"
+
+#: common/js/map.js:37
+msgid "Esperança de vida al néixer"
+msgstr "Esperanza de vida al nacer"
+
+#: common/js/map.js:39
+msgid " anys"
+msgstr "años"
+
 #: common/js/map.js:41
 msgid ""
 "són els anys que una persona espera viure al néixer, en promig, tenint en "
@@ -73,6 +144,14 @@ msgid ""
 msgstr ""
 "son los años que una persona espera vivir al nacer, en promedio, teniendo en "
 "cuenta el patrón de mortalidad en ese periodo. Período 2009-2013."
+
+#: common/js/map.js:42
+msgid "Mortalitat comparativa"
+msgstr "Mortalidad comparativa"
+
+#: common/js/map.js:43
+msgid "Raó de Mortalitat Comparativa."
+msgstr "Razón de Mortalidad Comparativa"
 
 #: common/js/map.js:47
 msgid ""
@@ -85,8 +164,16 @@ msgstr ""
 "razón entre la tasa de mortalidad estandarizada por edad del barrio respecto "
 "a la de la ciudad de Barcelona, mulitplicada por 100. Un valor por encima "
 "del 100 indica más mortalidad en el territorio respecto Barcelona y, en "
-"cambio, un valor por debajo de 100 indica menos mortalidad respeto la ciudad."
-" Período: 2009-2013."
+"cambio, un valor por debajo de 100 indica menos mortalidad respeto la "
+"ciudad. Período: 2009-2013."
+
+#: common/js/map.js:48
+msgid "Mortalitat permatura"
+msgstr "Mortalidad prematura"
+
+#: common/js/map.js:49
+msgid "Raó d'Anys Potencials de Vida Perduts."
+msgstr "Razón de años potenciales de vida perdidos."
 
 #: common/js/map.js:53
 msgid ""
@@ -104,6 +191,14 @@ msgstr ""
 "respecto Barcelona y, en cambio, un valor por debajo de 100 indica menos "
 "mortalidad respeto la ciudad. Período: 2009-2013."
 
+#: common/js/map.js:54 common/js/utils.js:30
+msgid "Tuberculosi"
+msgstr "Tuberculosis"
+
+#: common/js/map.js:55 common/js/utils.js:82
+msgid "Taxa de tuberculosi"
+msgstr "Tasa de tuberculosis"
+
 #: common/js/map.js:58
 msgid ""
 "taxa de tuberculosi. Nombre de nous casos de tuberculosi diagnosticats per "
@@ -111,6 +206,14 @@ msgid ""
 msgstr ""
 "tasa de tuberculosis. Número de nuevos casos de tuberculosis diagnosticados "
 "por 100.000 habitantes. Período: 2010-2014."
+
+#: common/js/map.js:59 common/js/utils.js:28
+msgid "Fecunditat adolescent"
+msgstr "Fecundidad adolescente"
+
+#: common/js/map.js:60
+msgid "Taxa de fecunditat adolescent."
+msgstr "Tasa de fecundidad adolescente"
 
 #: common/js/map.js:63
 msgid ""
@@ -122,184 +225,6 @@ msgstr ""
 "entre 15 y 19 años dividido por la población de mujeres entre 15 y 19 años "
 "por 1.000. Período 2010-2014."
 
-#: common/js/map.js:68
-#, javascript-format
-msgid ""
-"% de baix pes en néixer, nombre de nadons nascuts vius amb un pes inferior a "
-"2500 grams per 100 naixaments vius. Període: 2010-2014."
-msgstr ""
-"% de bajo peso al nacer, número de bebés nacidos vivos con un peso inferior "
-"a 2500 gramos por 100 nacimientos vivos. Período: 2010-2014."
-
-#: common/js/utils.js:39
-msgid "nivell mig"
-msgstr "nivel medio"
-
-#: common/js/utils.js:43 common/js/utils.js:48
-msgid "Renta familiar disponible per càpita 2014"
-msgstr "Renta Familiar Disponible per cápita 2014"
-
-#: common/js/utils.js:44
-msgid ""
-"El 2014 és manté el fort contrast entre la zona oest i nord-est i s'accentua "
-"la polarització per eixamplar-se la distancia entre el barris amb valors "
-"extrems"
-msgstr ""
-"En el 2014 se mantiene un fuerte contraste entre la zona Oeste y Nordeste  y "
-"se acentúa la polarización para ensancharse la distancia entre los barrios "
-"con valores extremos."
-
-#: common/js/utils.js:53
-msgid "LA TRINITAT NOVA"
-msgstr "LA TRINITAT NOVA"
-
-#: common/js/utils.js:54
-msgid "EL BON PASTOR - BARÓ DE VIVER"
-msgstr "EL BON PASTOR - BARÓ DE VIVER"
-
-#: common/js/utils.js:55
-msgid "BESÒS I MARESME"
-msgstr "BESÒS I MARESME"
-
-#: common/js/utils.js:57
-msgid "La Trinitat Nova"
-msgstr "La Trinitat Nova"
-
-#: common/js/utils.js:58
-msgid "el Bon Pastor"
-msgstr "el Bon Pastor"
-
-#: common/js/utils.js:59
-msgid "Baró de Viver"
-msgstr "Baró de Viver"
-
-#: common/js/utils.js:60
-msgid "Besòs i Maresme"
-msgstr "Besòs i Maresme"
-
-#: common/js/utils.js:63
-msgid "Significat en base 100 per la ciutat de Barcelona."
-msgstr "Significado en base 100 para la ciudad de Barcelona."
-
-#: common/js/utils.js:78
-msgid "Taxa de fecunditat adolescent"
-msgstr "Tasa de fecundidad adolescente"
-
-#: common/js/utils.js:97
-msgid "Titulats superiors i CFGS"
-msgstr "Titulados superiores y CFGS"
-
-#: common/js/utils.js:101
-msgid "Renda familiar disponible per habitant"
-msgstr "renta familiar disponible por habitante"
-
-#: common/js/map.js:5
-msgid "Envelliment"
-msgstr "Envejecimiento"
-
-#: common/js/map.js:6
-msgid "Índex sobreenvelliment."
-msgstr "Índice de sobreenvejecimiento"
-
-#: common/js/map.js:10
-msgid "Persones grans que viuen soles"
-msgstr "Personas mayores que viven solas"
-
-#: common/js/map.js:11
-#, c-format
-msgid "% persones 75 anys o més que viuen soles."
-msgstr "% de personas de 75 años o más que viven solas."
-
-#: common/js/map.js:14
-#, javascript-format
-msgid "% de persones de 75 anys o més que viuen soles. Anys 2014."
-msgstr "% de personas de 75 años o más que viven solas, año 2014."
-
-#: common/js/map.js:15
-msgid "Renda Familiar Disponible"
-msgstr "Renta Familiar Disponible"
-
-#: common/js/map.js:17
-msgid "Índex de Renda Familiar Disponible."
-msgstr "Índice de Renta Familiar Disponible"
-
-#: common/js/map.js:21
-msgid "Estudis primaris o menys"
-msgstr "Estudios primarios o menos"
-
-#: common/js/map.js:22
-#, c-format
-msgid "% persones de 15 anys o més amb estudis primaris o menys."
-msgstr "% de personas de 15 años o más con estudios primarios o menos."
-
-#: common/js/map.js:25
-#, c-format
-msgid "% persones de 15 anys o més amb estudis primaris o menys. Any 2014."
-msgstr ""
-"% de personas de 15 años o más con estudios primarios o menos. Año 2014"
-
-#: common/js/map.js:26 common/js/utils.js:27
-msgid "Atur"
-msgstr "Paro"
-
-#: common/js/map.js:27
-#, javascript-format
-msgid "% d'atur registrat entre 16-64 anys."
-msgstr "% de paro registrado, 16-64 años."
-
-#: common/js/map.js:31
-msgid "Abstenció eleccions"
-msgstr "Abstención elecciones "
-
-#: common/js/map.js:32
-#, c-format
-msgid "% abstenció eleccions municipals."
-msgstr "% de abstención en municipales."
-
-#: common/js/map.js:36 common/js/utils.js:29
-msgid "Esperança de vida"
-msgstr "Esperanza de vida"
-
-#: common/js/map.js:37
-msgid "Esperança de vida al néixer"
-msgstr "Esperanza de vida al nacer"
-
-#: common/js/map.js:39
-msgid " anys"
-msgstr "años"
-
-#: common/js/map.js:42
-msgid "Mortalitat comparativa"
-msgstr "Mortalidad comparativa"
-
-#: common/js/map.js:43
-msgid "Raó de Mortalitat Comparativa."
-msgstr "Razón de Mortalidad Comparativa"
-
-#: common/js/map.js:48
-msgid "Mortalitat permatura"
-msgstr "Mortalidad prematura"
-
-#: common/js/map.js:49
-msgid "Raó d'Anys Potencials de Vida Perduts."
-msgstr "Razón de años potenciales de vida perdidos."
-
-#: common/js/map.js:54 common/js/utils.js:30
-msgid "Tuberculosi"
-msgstr "Tuberculosis"
-
-#: common/js/map.js:55 common/js/utils.js:77
-msgid "Taxa de tuberculosi"
-msgstr "Tasa de tuberculosis"
-
-#: common/js/map.js:59 common/js/utils.js:28
-msgid "Fecunditat adolescent"
-msgstr "Fecundidad adolescente"
-
-#: common/js/map.js:60
-msgid "Taxa de fecunditat adolescent."
-msgstr "Tasa de fecundidad adolescente"
-
 #: common/js/map.js:64
 msgid "Baix pes en néixer"
 msgstr "Bajo peso al nacer"
@@ -309,158 +234,227 @@ msgstr "Bajo peso al nacer"
 msgid "% de baix pes en néixer."
 msgstr "% de bajo peso al nacer"
 
+#: common/js/map.js:68
+#, javascript-format
+msgid ""
+"% de baix pes en néixer, nombre de nadons nascuts vius amb un pes inferior a "
+"2500 grams per 100 naixaments vius. Període: 2010-2014."
+msgstr ""
+"% de bajo peso al nacer, número de bebés nacidos vivos con un peso inferior "
+"a 2500 gramos por 100 nacimientos vivos. Período: 2010-2014."
+
 #: common/js/utils.js:26
 msgid "Renda familiar disponible"
 msgstr "Renta familiar disponible"
 
-#: common/js/utils.js:34
+#: common/js/utils.js:33
+msgid "Descarrega Taula general <strong>Urban Hear</strong> en pdf"
+msgstr "Descarga Tabla general <strong> Urban Wear </ strong> en pdf"
+
+#: common/js/utils.js:39
 msgid "18 Barris amb indicadors més desfavorables"
 msgstr "18 barrios con indicadores más desfavorables"
 
-#: common/js/utils.js:35
+#: common/js/utils.js:40
 msgid "Districte"
 msgstr "Distrito"
 
-#: common/js/utils.js:36
+#: common/js/utils.js:41
 msgid "Barri"
 msgstr "Barrio"
 
-#: common/js/utils.js:37
+#: common/js/utils.js:42
 msgid "més favorables"
 msgstr "mas favorables"
 
-#: common/js/utils.js:38
+#: common/js/utils.js:43
 msgid "més favorable"
 msgstr "más desfavorables"
 
-#: common/js/utils.js:40
+#: common/js/utils.js:44
+msgid "nivell mig"
+msgstr "nivel medio"
+
+#: common/js/utils.js:45
 msgid "més desfavorables"
 msgstr "más desfavorables"
 
+#: common/js/utils.js:48 common/js/utils.js:53
+msgid "Renta familiar disponible per càpita 2014"
+msgstr "Renta Familiar Disponible per cápita 2014"
+
+#: common/js/utils.js:49
+msgid ""
+"El 2014 és manté el fort contrast entre la zona oest i nord-est i s'accentua "
+"la polarització per eixamplar-se la distancia entre el barris amb valors "
+"extrems"
+msgstr ""
+"En el 2014 se mantiene un fuerte contraste entre la zona Oeste y Nordeste  y "
+"se acentúa la polarización para ensancharse la distancia entre los barrios "
+"con valores extremos."
+
+#: common/js/utils.js:58
+msgid "LA TRINITAT NOVA"
+msgstr "LA TRINITAT NOVA"
+
+#: common/js/utils.js:59
+msgid "EL BON PASTOR - BARÓ DE VIVER"
+msgstr "EL BON PASTOR - BARÓ DE VIVER"
+
+#: common/js/utils.js:60
+msgid "BESÒS I MARESME"
+msgstr "BESÒS I MARESME"
+
+#: common/js/utils.js:62
+msgid "La Trinitat Nova"
+msgstr "La Trinitat Nova"
+
+#: common/js/utils.js:63
+msgid "el Bon Pastor"
+msgstr "el Bon Pastor"
+
 #: common/js/utils.js:64
-#, c-format
+msgid "Baró de Viver"
+msgstr "Baró de Viver"
+
+#: common/js/utils.js:65
+msgid "Besòs i Maresme"
+msgstr "Besòs i Maresme"
+
+#: common/js/utils.js:68
+msgid "Significat en base 100 per la ciutat de Barcelona."
+msgstr "Significado en base 100 para la ciudad de Barcelona."
+
+#: common/js/utils.js:69
 msgid "25% amb millor indicador"
 msgstr "25% con mejor indicador"
 
-#: common/js/utils.js:65
-#, c-format
+#: common/js/utils.js:70
 msgid "50% amb valors intermitjos"
 msgstr "50% con valores intermedios"
 
-#: common/js/utils.js:66
-#, c-format
+#: common/js/utils.js:71
 msgid "25% amb pitjor indicador"
 msgstr "25% con peor indicador"
 
-#: common/js/utils.js:68
+#: common/js/utils.js:73
 msgid "Índex de sobre-envelliment"
 msgstr "Índice de sobreenvejecimiento"
 
-#: common/js/utils.js:69
+#: common/js/utils.js:74
 #, javascript-format
 msgid "% de persones 75 anys o més que viuen soles"
 msgstr "% de personas de 75 años o más que viven solas"
 
-#: common/js/utils.js:70
+#: common/js/utils.js:75
 msgid "Índex Renda Familiar Disponible"
 msgstr "Índice Renta Familiar Disponible"
 
-#: common/js/utils.js:71
-#, c-format
+#: common/js/utils.js:76
 msgid "% persones de 15 anys o més amb estudis primaris o menys"
 msgstr "% personas de 15 años o más con estudios primarios o menos"
 
-#: common/js/utils.js:72
-#, c-format
+#: common/js/utils.js:77
 msgid "% atur registrat 16-64 anys"
 msgstr "% paro registrado 16-64 años"
 
-#: common/js/utils.js:73
-#, c-format
+#: common/js/utils.js:78
 msgid "% abstenció muncipals"
 msgstr "% abstención municipales"
 
-#: common/js/utils.js:74
+#: common/js/utils.js:79
 msgid "Esperança de vida al nèixer"
 msgstr "Esperanza de vida al nacer"
 
-#: common/js/utils.js:75
+#: common/js/utils.js:80
 msgid "Raó de mortalitat comparativa"
 msgstr "Razón de mortalidad comparativa"
 
-#: common/js/utils.js:76
+#: common/js/utils.js:81
 msgid "Raó d'Anys Potencials de Vida Perduts"
 msgstr "Razón de años potenciales de vida perdidos"
 
-#: common/js/utils.js:79
+#: common/js/utils.js:83
+msgid "Taxa de fecunditat adolescent"
+msgstr "Tasa de fecundidad adolescente"
+
+#: common/js/utils.js:84
 msgid "Prevalència baix pes en nèixer"
 msgstr "Prevalencia de bajo peso al nacer"
 
-#: common/js/utils.js:82
+#: common/js/utils.js:87
 msgid "Indicadors socioeconòmics:"
 msgstr "Indicadores socioeconómicos:"
 
-#: common/js/utils.js:84 common/js/utils.js:102 common/js/utils.js:103 
-#: common/js/utils.js:104
+#: common/js/utils.js:89 common/js/utils.js:107 common/js/utils.js:108
+#: common/js/utils.js:109
 msgid "Indicadors"
 msgstr "Indicadores"
 
-#: common/js/utils.js:85
+#: common/js/utils.js:90
 msgid "Mitjana ciutat"
 msgstr "Media de ciudad"
 
-#: common/js/utils.js:86
+#: common/js/utils.js:91
 msgid "Població. Juny 2014"
 msgstr "Población. Junio 2014"
 
-#: common/js/utils.js:87
+#: common/js/utils.js:92
 msgid "Superfície (km2)"
 msgstr "Superficie (km2)"
 
-#: common/js/utils.js:88
+#: common/js/utils.js:93
 msgid "Densitat (hab/km2)"
 msgstr "Densidad (hab/km2)"
 
-#: common/js/utils.js:89
+#: common/js/utils.js:94
 msgid "Població per edat"
 msgstr "Población por edad"
 
-#: common/js/utils.js:90
+#: common/js/utils.js:95
 msgid "Població per lloc de naixament"
 msgstr "Población por lugar de nacimiento"
 
-#: common/js/utils.js:91
+#: common/js/utils.js:96
 msgid "Resta de Catalunya"
 msgstr "Resto de Cataluña"
 
-#: common/js/utils.js:92
+#: common/js/utils.js:97
 msgid "Resta de Espanya"
 msgstr "Resto de España"
 
-#: common/js/utils.js:93
+#: common/js/utils.js:98
 msgid "Estranger"
 msgstr "Extranjero"
 
-#: common/js/utils.js:94
+#: common/js/utils.js:99
 msgid "Població per nacionalitat"
 msgstr "Población por nacionalidades"
 
-#: common/js/utils.js:95
+#: common/js/utils.js:100
 msgid "Espanyols"
 msgstr "Españoles"
 
-#: common/js/utils.js:96
+#: common/js/utils.js:101
 msgid "Estrangers"
 msgstr "Extranjeros"
 
-#: common/js/utils.js:98
+#: common/js/utils.js:102
+msgid "Titulats superiors i CFGS"
+msgstr "Titulados superiores y CFGS"
+
+#: common/js/utils.js:103
 msgid "Població de més de 65 anys que viu sola"
 msgstr "Población mayor de 65 años que vive sola "
 
-#: common/js/utils.js:99
+#: common/js/utils.js:104
 msgid "Índex de sobreenvelliment"
 msgstr "Índice de sobreenvejecimiento"
 
-#: common/js/utils.js:100
+#: common/js/utils.js:105
 msgid "Nombre d’aturats registrats"
 msgstr "Número de parados registrados"
+
+#: common/js/utils.js:106
+msgid "Renda familiar disponible per habitant"
+msgstr "renta familiar disponible por habitante"
