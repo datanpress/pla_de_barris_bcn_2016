@@ -146,7 +146,23 @@ d3.csv("../common/data/hurban_heart.csv", function(doc) {
 				.classed('number', true)
 				.classed('first', first)
 				.style('background-color', col['color'](parse(value)))
-				.attr('title', texts[col.key]["nom_curt"]+' a '+ row_data.Barri+': favorable')
+				.attr('title', function(d){
+					console.log(value,col['color'](parse(value)))
+					var r=iJS._('més favorables');;
+
+					switch (col['color'](parse(value))) {
+					    case '#79ce66':
+					        r= iJS._('més favorables');
+					        break;
+					    case '#fff391':
+					        r= iJS._('nivell mig');
+					        break;
+					    case '#ff5e33':
+					        r= iJS._('més desfavorables');
+					        break;
+					}
+					return texts[col.key]["nom_curt"]+' a '+ row_data.Barri+': '+r
+				})
 				.text(humanize(value));
 		});
 
