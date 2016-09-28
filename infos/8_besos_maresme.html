@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <head>
-	<title>renda</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
 	<link href="../common/style/common_style.css" rel="stylesheet">
 	<style>
@@ -14,9 +15,13 @@
 		.container_in{
 			padding-bottom: 20px;
 		}
+		.container_in tr:nth-child(2n) {
+    	background: #e4dddd;
+		}
 		.fullbackground{
 			width: 100%;
 			background-color: #f2f2f2;
+			padding: 20px 0;
 		}
 		/*indexs*/
 		.index{
@@ -186,34 +191,36 @@
 					<table>
 						<tr><th class="indicadors">Indicadors</th>					<th class="mitjanaC">Mitjana ciutat</th>				<th>Besòs i Maresme</th></tr>
 						<tr><td class="poblacio">Població. Juny 2014</td>		<td class="ciutat">1.613.393</td>	<td class="barri">23.191</td></tr>
-						<tr><td class="superficie">Superfície (km2)</td>			<td class="ciutat">102,2</td>		<td class="barri"></td></tr>
-						<tr><td class="densitat">Densitat (hab/km2)</td>			<td class="ciutat">15.793</td>		<td class="barri"></td></tr>
+						<tr><td class="superficie">Superfície (km2)</td>			<td class="ciutat">102,2</td>		<td class="barri">1,3</td></tr>
+						<tr><td class="densitat">Densitat (hab/km2)</td>			<td class="ciutat">15.793</td>		<td class="barri">18.203</td></tr>
 						<!--<tr><td class="poblacioE">Població per edat</td>			<td class="ciutat"></td>	<td class="barri"></td></tr>
 						<tr><td class="tab">0-14</td>			<td class="ciutat">12,5%</td>		<td class="barri"></td></tr>
 						<tr><td class="tab">15-24</td>			<td class="ciutat">8,7%</td>		<td class="barri"></td></tr>
 						<tr><td class="tab">26-64</td>			<td class="ciutat">57,3%</td>		<td class="barri"></td></tr>
 						<tr><td class="tab">65 i més</td>		<td class="ciutat">21,4%</td>		<td class="barri"></td></tr>-->
 						<tr><td class="poblacioE">Població per edat</td>			<td class="ciutat"></td>	<td class="barri"></td></tr>
-						<tr><td class="tab">0-15</td>			<td class="ciutat">12,5%</td>		<td class="barri">14,9%</td></tr>
-						<tr><td class="tab">16-64</td>			<td class="ciutat">57,3%</td>		<td class="barri">66,7%</td></tr>
-						<tr><td class="tab">65 i més</td>		<td class="ciutat">21,4%</td>		<td class="barri">18,4%</td></tr>
+						<tr><td class="tab">0-14</td>			<td class="ciutat">12,5%</td>		<td class="barri">14%</td></tr>
+						<tr><td class="tab">15-24</td>			<td class="ciutat">8,7%</td>		<td class="barri">10,2%</td></tr>
+						<tr><td class="tab">26-64</td>			<td class="ciutat">57,3%</td>		<td class="barri">57,4%</td></tr>
+						<tr><td class="tab">65 i més</td>		<td class="ciutat">22,2%</td>		<td class="barri">30%</td></tr>
 
 						<!--<tr><td class="poblacioN">Població per lloc de naixament</td>	<td class="ciutat"></td>		<td class="barri"></td></tr>
 						<tr><td class="tab">Barcelona</td>	<td class="ciutat">51,9%</td>			<td class="barri"></td></tr>
 						<tr><td class="tab RestaCat">Resta de Catalunya</td>	<td class="ciutat">7,5%</td>	<td class="barri"></td></tr>
 						<tr><td class="tab RestaEs">Resta de Espanya</td>	<td class="ciutat">18,4%</td>	<td class="barri"></td></tr>-->
 						<tr><td class="poblacioN">Població per lloc de naixament</td>	<td class="ciutat"></td>		<td class="barri"></td></tr>
-						<tr><td class="tab RestaCat"Catalunya</td>	<td class="ciutat">59,3%</td>	<td class="barri">48,9%</td></tr>
+						<tr><td class="tab RestaCat">Barcelona</td>	<td class="ciutat">51,9%</td>	<td class="barri">43,9%</td></tr>
+						<tr><td class="tab RestaCat">Catalunya</td>	<td class="ciutat">7,5%</td>	<td class="barri">5%</td></tr>
 						<tr><td class="tab RestaEs">Resta de Espanya</td>	<td class="ciutat">18,4%</td>	<td class="barri">21,2%</td></tr>
 						<tr><td class="tab Estranger">Estranger</td>	<td class="ciutat">22,2%</td>			<td class="barri">30,0%</td></tr>
 						<tr><td class="poblacioNacio">Població per nacionalitat</td>	<td class="ciutat"></td>			<td class="barri"></td></tr>
-						<tr><td class="tab Espanyols">Espanyols</td>		<td class="ciutat">83,7%</td>		<td class="barri">75%</td></tr>
-						<tr><td class="tab Estrangers">Estrangers</td>		<td class="ciutat">16,3%</td>		<td class="barri">25%</td></tr>
-						<tr><td class="titulatsSup">Titulats superiors i CFGS</td>	<td class="ciutat">28,4%</td>		<td class="barri"></td></tr>
-						<tr><td class="p65sola">Població de més de 65 anys que viu sola</td>	<td class="ciutat">25,6%</td>	<td class="barri">35,2%</td></tr>
-						<tr><td class="inSobreE">Índex de sobreenvelliment</td>	<td class="ciutat">53,5</td>		<td class="barri">63,1</td></tr>
-						<tr><td class="aturatsR">Nombre d’aturats registrats</td><td class="ciutat">99056</td>	<td class="barri"></td></tr>
-						<tr><td class="rendaFH">Renda familiar disponible per habitant</td>	<td class="ciutat">100</td>	<td class="barri">53,0</td></tr>
+						<tr><td class="tab Espanyols">Espanyols</td>		<td class="ciutat">83,7%</td>		<td class="barri">76,4%</td></tr>
+						<tr><td class="tab Estrangers">Estrangers</td>		<td class="ciutat">16,3%</td>		<td class="barri">23,6%</td></tr>
+						<tr><td class="titulatsSup">Titulats superiors i CFGS</td>	<td class="ciutat">28,4%</td>		<td class="barri">9,1%</td></tr>
+						<tr><td class="p65sola">Població de més de 65 anys que viu sola</td>	<td class="ciutat">25,6%</td>	<td class="barri">26,8%</td></tr>
+						<tr><td class="inSobreE">Índex de sobreenvelliment</td>	<td class="ciutat">53,5%</td>		<td class="barri">63,1%</td></tr>
+						<tr><td class="aturatsR">Nombre d’aturats registrats</td><td class="ciutat">99.056</td>	<td class="barri"></td></tr>
+						<tr><td class="rendaFH">Renda familiar disponible per habitant</td>	<td class="ciutat">100%</td>	<td class="barri">53%</td></tr>
 					</table>
 				</div>
 			</div>
@@ -231,6 +238,10 @@
 		else if (value==1){return '#d24035'}
 	}
 	var map = addMap(d3.select("#map"), 'BM', myColors, undefined, undefined, undefined, false);
+
+	d3.selectAll('td.ciutat,td.barri').each(function(d){
+		d3.select(this).attr('title',d3.select(this.parentNode).select('td').text())
+	})
 
 </script>
 </body>

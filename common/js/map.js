@@ -182,9 +182,12 @@ function addMap(container, property, colors, inv, ready_function, domain, toolti
                     .attr("d", path);
 
 
-                mapcontainer.select('g.barris').attr('transform','translate('+(-width*0.1)+','+(-height*0.04)+')rotate(45,'+width/2+','+height/2+')')
-                mapcontainer.select('g.districtes').attr('transform','translate('+(-width*0.1)+','+(-height*0.04)+')rotate(45,'+width/2+','+height/2+')')
-                mapcontainer.select('g.exterior').attr('transform','translate('+(-width*0.1)+','+(-height*0.04)+')rotate(45,'+width/2+','+height/2+')')
+                // mapcontainer.select('g.barris').attr('transform','translate('+(-width*0.1)+','+(-height*0.04)+')rotate(45,'+width/2+','+height/2+')')
+                // mapcontainer.select('g.districtes').attr('transform','translate('+(-width*0.1)+','+(-height*0.04)+')rotate(45,'+width/2+','+height/2+')')
+                // mapcontainer.select('g.exterior').attr('transform','translate('+(-width*0.1)+','+(-height*0.04)+')rotate(45,'+width/2+','+height/2+')')
+                mapcontainer.select('g.barris').attr('transform','translate('+(-width*0.1)+','+height*0.1+')rotate(45,'+width/2+','+height/2+')')
+                mapcontainer.select('g.districtes').attr('transform','translate('+(-width*0.1)+','+(height*0.1)+')rotate(45,'+width/2+','+height/2+')')
+                mapcontainer.select('g.exterior').attr('transform','translate('+(-width*0.1)+','+(height*0.1)+')rotate(45,'+width/2+','+height/2+')')
                 fillBaris(property, inv, domain, tooltip_val);
                 if(ready_function!==undefined){
                     ready_function(mapObj);
@@ -237,11 +240,22 @@ function addMap(container, property, colors, inv, ready_function, domain, toolti
                         var mouse = d3.mouse(d3.select('body').node()).map(function(d) {
                             return parseInt(d);
                         });
+
                         var val = hurban_heart.get(parseInt(d.properties.C_Barri))[property];
                         var nomBarri = hurban_heart.get(parseInt(d.properties.C_Barri))["Barri"];
                         val = humanize(val);
                         tooltip.classed('hidden', false)
-                            .attr('style', 'left:' + (mouse[0] + 15) + 'px; top:' + (mouse[1] - 35) + 'px')
+                            .attr('style', function(){
+                              console.log(mouse[0] , window.innerWidth/2)
+                              if (mouse[0] < window.innerWidth/2){
+                                return 'left:' + (mouse[0] + 15) + 'px; top:' + (mouse[1] - 35) + 'px'
+                              }else{
+                                console.log(this)
+                                console.log(d3.select(this).node().getBoundingClientRect().width);
+                                return 'left:' + (mouse[0]-d3.select(this).node().getBoundingClientRect().width -15) + 'px; top:' + (mouse[1] - 35) + 'px'
+                              }
+
+                            })
                             .html('<span style="font-size:0.9em">'+nomBarri + '</span><div style="font-size:0.75em;font-weight:bold;margin-left:0.5em">' + tooltip_val(property, d.properties.C_Barri, hurban_heart)+'</div>');
                     })
                     .on('mouseout', function() {

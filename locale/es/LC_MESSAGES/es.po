@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pla de barris\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-26 08:52+0200\n"
-"PO-Revision-Date: 2016-09-26 08:53+0200\n"
+"POT-Creation-Date: 2016-09-28 16:14+0200\n"
+"PO-Revision-Date: 2016-09-28 16:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -248,8 +248,8 @@ msgid "Renda familiar disponible"
 msgstr "Renta familiar disponible"
 
 #: common/js/utils.js:33
-msgid "Descarrega Taula general <strong>Urban Hear</strong> en pdf"
-msgstr "Descarga Tabla general <strong> Urban Wear </ strong> en pdf"
+msgid "Descarrega la taula general <strong>Urban Heart</strong> en pdf"
+msgstr "Descarga la tabla general <strong> Urban Heart</ strong> en pdf"
 
 #: common/js/utils.js:39
 msgid "18 Barris amb indicadors més desfavorables"
@@ -458,3 +458,6 @@ msgstr "Número de parados registrados"
 #: common/js/utils.js:106
 msgid "Renda familiar disponible per habitant"
 msgstr "renta familiar disponible por habitante"
+
+#~ msgid "Descarrega Taula general <strong>Urban Hear</strong> en pdf"
+#~ msgstr "Descarga Tabla general <strong> Urban Wear </ strong> en pdf"
