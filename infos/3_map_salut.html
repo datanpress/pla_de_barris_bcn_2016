@@ -11,11 +11,12 @@
 			width: 100%;
 		}
 		.legend{
-			background-color: rgba(255,255,255, 0.8);
+			background-color: rgba(255,255,255, 0.7);
 			border: 1px white solid;
 			display: inline-block;
 			padding: 0.5em;
-			margin: 0.2em 1.5em 0em
+			margin: 0.8em 1.5em 0em;
+			width: 60%;
 		}
 		@media (max-width: 564px) {
 			.info_text{
@@ -96,7 +97,7 @@
 		var value= hurban_heart.get(parseInt(barri))[property];
 		if (value==3){return iJS._('més favorable')}
 		else if (value==2){return iJS._('nivell mig')}
-		else if (value==1){return iJS._('menys favorable')}
+		else if (value==1){return iJS._('més desfavorables')}
 	}
 
 	addMap(d3.select("#map"), 'indic', myColors, undefined, function(map) {
@@ -105,21 +106,21 @@
         legendT.style('border', '1px gray solid').style('border-radius', '3px')
         var legend = legendT.append('div').style('display', 'table-row');
         legend.append('div').style('background-color', '#79ce66').style("width", "10px").style("height", "10px").style('display', 'table-cell');
-        row1.append('span').text(iJS._('més favorables')).style('font-size', '0.9em').style('font-weight', 'bold');
+        row1.append('span').text(iJS._('més favorables')).style('font-size', '0.9em').style('font-weight', 'normal');
         //
         var row2 = d3.select('.legend').append('div').style('text-align', 'left')
         var legendT = row2.append('div').style('display', 'inline-table').style('width','15px').style('height','15px').style('vertical-align','middle').style('margin-right', '5px').style('margin-left', '15px');
         legendT.style('border', '1px gray solid').style('border-radius', '3px')
         var legend = legendT.append('div').style('display', 'table-row');
         legend.append('div').style('background-color', '#fff391').style("width", "10px").style("height", "10px").style('display', 'table-cell');
-        row2.append('span').text(iJS._('nivell mig')).style('font-size', '0.9em').style('font-weight', 'bold');
+        row2.append('span').text(iJS._('nivell mig')).style('font-size', '0.9em').style('font-weight', 'normal');
         //
         var row3 = d3.select('.legend').append('div').style('text-align', 'left')
         var legendT = row3.append('div').style('display', 'inline-table').style('width','15px').style('height','15px').style('vertical-align','middle').style('margin-right', '5px').style('margin-left', '15px');
         legendT.style('border', '1px gray solid').style('border-radius', '3px')
         var legend = legendT.append('div').style('display', 'table-row');
         legend.append('div').style('background-color', '#ff5e33').style("width", "10px").style("height", "10px").style('display', 'table-cell');
-        row3.append('span').text( iJS._('més desfavorables')).style('font-size', '0.9em').style('font-weight', 'bold');
+        row3.append('span').text( iJS._('més desfavorables')).style('font-size', '0.9em').style('font-weight', 'normal');
 	}, undefined, tooltip);
 </script>
 </body>
